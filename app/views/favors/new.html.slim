@@ -1,0 +1,20 @@
+h1
+    -if params[:dimension_name] == "0"
+        | 粘性度評価　アンケート
+    -elsif params[:dimension_name] == "1"
+        | 摩擦度評価　アンケート
+    -elsif params[:dimension_name] == "2"
+        | 凸凹評価　アンケート
+    -elsif params[:dimension_name] == "3"
+        | 好感度　アンケート
+    -elsif params[:dimension_name] == "4"
+        | 弾力感　アンケート
+    -elsif params[:dimension_name] == "5"
+        | 湿度　アンケート
+    -elsif params[:dimension_name] == "6"
+        | 硬さ　アンケート
+
+h3 触覚オノマトペに関して、上記の評価軸で７段階評価を行ってください。直感的にお答えください。
+== render 'form'
+
+= link_to 'Back', favors_path

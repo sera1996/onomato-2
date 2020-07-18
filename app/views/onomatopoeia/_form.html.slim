@@ -1,0 +1,40 @@
+= form_with(model: onomatopoeium, local: true) do |form|
+  - if onomatopoeium.errors.any?
+    #error_explanation
+      h2
+        = pluralize(onomatopoeium.errors.count, "error")
+        |  prohibited this onomatopoeium from being saved:
+      ul
+        - onomatopoeium.errors.full_messages.each do |message|
+          li
+            = message
+  .input-group.mb-3
+    .input-group-prepend
+      span.input-group-text#basic-addon1
+        | 単語名
+      = form.text_field :name, :class => "form_control"
+  .input-group.mb-3
+    .input-group-prepend
+      span.input-group-text#basic-addon1
+        | 定義
+      = form.text_field :description, :class => "form_control"
+  .input-group.mb-3
+    .input-group-prepend
+      span.input-group-text#basic-addon1
+        | アルファベット仮名
+      = form.text_field :kana, :class => "form_control"
+  .field
+    = form.fields_for :samples do |sample|
+      = render 'sample_fields', f: sample
+    .links
+      = link_to_add_association 'add sample', form, :samples
+      
+  .field 
+    = form.label "サンプル画像"
+    = form.file_field :example, direct_upload: true
+  .field
+    = form.hidden_field :id
+  .field
+    = form.hidden_field :category_id
+  .actions
+    = form.submit

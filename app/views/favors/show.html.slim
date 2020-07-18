@@ -1,0 +1,10 @@
+p#notice = notice
+
+p
+  strong Survey:
+  = @favor.survey_id
+p
+  = @favor.dimension_name
+=> link_to 'Edit', edit_favor_path(@favor)
+'|
+=< link_to 'Back', favors_path

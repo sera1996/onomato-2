@@ -1,0 +1,48 @@
+.container-fluid.bg-light
+  p#notice
+    = notice
+  h1
+    | Onomatopoeia
+  table.table
+    thead.thead-light
+      tr
+        th
+          | 番号
+        th
+          | 単語
+        th
+          | 定義
+        th 
+          | ID
+        th
+          | 仮名
+        th
+          | 閲覧
+        th
+          | 編集
+        th
+          | 削除
+    tbody
+      - @onomatopoeia.each do |onomatopoeium|
+        tr
+          td
+            = onomatopoeium.id
+          td
+            = onomatopoeium.name
+          -unless onomatopoeium.description.nil?
+            td
+              = onomatopoeium.description
+          td
+            = onomatopoeium.category_id
+          -unless onomatopoeium.kana.nil?
+            td 
+              = onomatopoeium.kana
+
+          td
+            = link_to 'Show', onomatopoeium
+          td
+            = link_to 'Edit', edit_onomatopoeium_path(onomatopoeium)
+          td
+            = link_to 'Destroy', onomatopoeium, method: :delete, data: { confirm: 'Are you sure?' }
+  br
+  = link_to 'New Onomatopoeium', new_onomatopoeium_path

@@ -1,0 +1,21 @@
+h1 Listing favors
+
+table
+  thead
+    tr
+      th Survey
+      th
+      th
+      th
+
+  tbody
+    - @favors.each do |favor|
+      tr
+        td = favor.survey_id
+        td = link_to 'Show', favor
+        td = link_to 'Edit', edit_favor_path(favor)
+        td = link_to 'Destroy', favor, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Favor', new_favor_path

@@ -1,0 +1,167 @@
+head
+    script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+.container-fluid
+
+
+    textarea#data
+    .w-100
+        #mynetwork style="height:1000px;"
+javascript:
+
+    function draw() {
+    // create some nodes
+    var nodes = [
+        { id: 0, label: "さらさら", group: 1 },
+        { id: 1, label: "すべすべ", group: 1 },
+        { id: 2, label: "つるつる", group: 1 },
+        { id: 3, label: "でこぼこ", group: 1 },
+        { id: 4, label: "がさがさ", group: 1 },
+        { id: 5, label: "ざらざら", group: 1 },
+        { id: 6, label: "ふわふわ", group: 1 },
+        { id: 7, label: "ぶわぶわ", group: 1 },
+        { id: 8, label: "ぶよぶよ", group: 1 },
+        { id: 9, label: "ぷるぷる", group: 1 },
+        { id: 10, label: "ぐにゃぐにゃ", group: 2 },
+        { id: 11, label: "ふかふか", group: 2 },
+        { id: 12, label: "ふにゃふにゃ", group: 3 },
+        { id: 13, label: "むちむち", group: 2 },
+        { id: 14, label: "ごつごつ", group: 2 },
+        { id: 15, label: "ごわごわ", group: 2 },
+        { id: 16, label: "かちかち", group: 3 },
+        { id: 17, label: "べたべた", group: 3 },
+        { id: 18, label: "べとべと", group: 3 },
+        { id: 19, label: "べちょべちょ", group: 3 },
+        { id: 20, label: "びしょびしょ", group: 3 },
+        { id: 21, label: "びちゃびちゃ", group: 3 },
+        { id: 22, label: "ぐしょぐしょ", group: 3 },
+        { id: 23, label: "じくじく", group: 3 },
+        { id: 24, label: "ぼそぼそ", group: 4 },
+        { id: 25, label: "ぽそぽそ", group: 4 },
+        { id: 26, label: "かさかさ", group: 5 },
+        { id: 27, label: "ぱさぱさ", group: 4 },
+        { id: 28, label: "ねばねば", group: 0 },
+        { id: 29, label: "ねちねち", group: 2 },
+        { id: 30, label: "ねとねと", group: 3 },
+        { id: 31, label: "ねちゃねちゃ", group: 2 },
+        { id: 32, label: "ぬめぬめ", group: 2 },
+        { id: 33, label: "ぬるぬる", group: 2 },
+        { id: 34, label: "にゅるにゅる", group: 2 },
+        { id: 35, label: "ぎとぎと", group: 2 },
+
+    ];
+
+    // create some edges
+    var edges = [
+        { from: 1, to: 0 },
+        { from: 2, to: 0 },
+        { from: 3, to: 0 },
+        { from: 3, to: 2 },
+        { from: 4, to: 0 },
+        { from: 5, to: 0 },
+        { from: 6, to: 0 },
+        { from: 7, to: 0 },
+        { from: 8, to: 0 },
+        { from: 9, to: 0 },
+        { from: 11, to: 10 },
+        { from: 11, to: 3 },
+        { from: 11, to: 2 },
+        { from: 11, to: 0 },
+        { from: 12, to: 11 },
+        { from: 13, to: 11 },
+        { from: 14, to: 11 },
+        { from: 15, to: 11 },
+        { from: 17, to: 16 },
+        { from: 18, to: 16 },
+        { from: 18, to: 17 },
+        { from: 19, to: 16 },
+        { from: 19, to: 17 },
+        { from: 19, to: 18 },
+        { from: 20, to: 16 },
+        { from: 20, to: 17 },
+        { from: 20, to: 18 },
+        { from: 20, to: 19 },
+        { from: 21, to: 16 },
+        { from: 21, to: 17 },
+        { from: 21, to: 18 },
+        { from: 21, to: 19 },
+        { from: 21, to: 20 },
+        { from: 22, to: 16 },
+        { from: 22, to: 17 },
+        { from: 22, to: 18 },
+        { from: 22, to: 19 },
+        { from: 22, to: 20 },
+        { from: 22, to: 21 },
+        { from: 23, to: 16 },
+        { from: 23, to: 17 },
+        { from: 23, to: 18 },
+        { from: 23, to: 19 },
+        { from: 23, to: 20 },
+        { from: 23, to: 21 },
+        { from: 23, to: 22 },
+        { from: 23, to: 12 },
+        { from: 23, to: 11 },
+        { from: 24, to: 23 },
+        { from: 24, to: 11 },
+        { from: 25, to: 24 },
+        { from: 25, to: 23 },
+        { from: 25, to: 11 },
+        { from: 26, to: 24 },
+        { from: 26, to: 11 },
+        { from: 26, to: 16 },
+        { from: 26, to: 25 },
+        { from: 27, to: 11 },
+        { from: 27, to: 23 },
+        { from: 27, to: 25 },
+        { from: 27, to: 24 },
+        { from: 27, to: 26 },
+        { from: 28, to: 11 },
+        { from: 28, to: 27 },
+        { from: 29, to: 23 },
+        { from: 29, to: 27 },
+        { from: 29, to: 11 },
+        { from: 30, to: 23 },
+        { from: 31, to: 30 },
+        { from: 31, to: 11 },
+        { from: 31, to: 23 },
+        { from: 31, to: 27 },
+        { from: 32, to: 11 },
+        { from: 33, to: 11 },
+        { from: 33, to: 27 },
+        { from: 34, to: 11 },
+        { from: 34, to: 29 },
+        { from: 35, to: 11 },
+        { from: 35, to: 34 },
+        { from: 35, to: 29 },
+        
+    ];
+
+    // create a network
+    var container = document.getElementById("mynetwork");
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+    var options = {
+        nodes: {
+        shape: "dot",
+        size: 16
+        },
+        physics: {
+        forceAtlas2Based: {
+            gravitationalConstant: -26,
+            centralGravity: 0.005,
+            springLength: 230,
+            springConstant: 0.18
+        },
+        maxVelocity: 146,
+        solver: "forceAtlas2Based",
+        timestep: 0.35,
+        stabilization: { iterations: 150 }
+        }
+    };
+    var network = new vis.Network(container, data, options);
+    }
+
+    window.addEventListener("load", () => {
+    draw();
+    });

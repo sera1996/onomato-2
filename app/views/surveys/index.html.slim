@@ -1,0 +1,21 @@
+h1 集計アンケート一覧
+
+table.table
+  thead
+    tr
+      th
+        | ID
+      th
+        | 回答ページ
+      th
+
+  tbody
+    - @surveys.each do |survey|
+      tr
+        td = survey.id.to_s
+        td = link_to '回答ページへ', survey
+        td = link_to '削除', survey, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to '新規回答作成', new_survey_path

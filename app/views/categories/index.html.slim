@@ -1,0 +1,43 @@
+.container-fluid.mt-3
+  .row
+    .col-md-2.col-xl-2.bd-sidebar
+      nav.collapse.bd-links#bd-docs-nav
+        .bd-toc-item
+          a.bd-toc-link href="#"
+            | Top
+    .col-md-8.col-xl-8.py-md-3.pl-md-5.bd-content.shadow.p-3.mb-5.bg-light.rounded role="main"
+      p#notice
+        = notice
+      h1#title
+        | カテゴリーから選択
+      /.category_index
+      - @categories.each do |category|
+        .card.shadow-sm.mx-5.my-2 style="width:200px;height:300px;float:left;"
+          - if category.image.attached?
+            /.block
+            /.image
+            a[href="/categories/#{category.id}"]
+              =image_tag(url_for(category.image),:class=>"card-img-top",:style=>"width:200px;height:200px;")
+            .card-body
+              p.card-text style="text-align:center;"
+                = category.name
+    .col-md-2.col-xl-2.bd-sidebar
+      nav.collapse.bd-links#bd-docs-nav
+        .bd-toc-item
+          a.bd-toc-link href="#"
+        /.card style="width:400px"
+          =image_tag(url_for(category.image), :class=>"card-img-top")
+          .card-body
+            p.card-text style="text-align:center;"
+              =category.name
+.footer
+  a href="https://cogpsy.sfc.keio.ac.jp/imailab/" target="_blank"
+    | 今井むつみ研究室
+  br
+  | copyright © 2013-2020 Imai Mutsumi Lab. All rights reserved.
+/footer.footer.mt-auto.py-3
+  .container
+    span.text-muted
+      | All Rights Reserved
+
+

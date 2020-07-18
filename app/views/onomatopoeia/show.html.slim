@@ -1,0 +1,56 @@
+.container.mb-4.shadow.bg-light
+  p#notice
+    = notice
+
+  /.card
+    .card-header
+    .card-body
+      .card-title
+        = @onomatopoeium.name
+      .card-text
+  h1#onomatope_title
+    = @onomatopoeium.name
+  h3#onomatope_kana
+    = @onomatopoeium.kana
+  p#onomatope_description
+    = @onomatopoeium.description
+  .mb-3
+    /- if @onomatopoeium.example.attached?
+      | <image id = "onomatope_sample" class="rounded mx-auto d-block"src="
+      =(url_for(@onomatopoeium.example))
+      |">
+  h5
+    | 用例一覧
+  #accordion
+    - @onomatopoeium.samples.each_with_index do |sample,i|
+      .card.mb-2
+        .card-header
+          a.card-link data-toggle="collapse" href = "#collapse#{i}"
+            | #
+            = i + 1
+        .collapse id = "collapse#{i}"
+          .card-body
+            - str = sample.sentence
+            .mb-3
+              .float-left
+                = str.split(@onomatopoeium.name)[0]
+              - if str.include?(@onomatopoeium.name)
+                .font-weight-bold.float-left
+                  = str.slice(str.index(@onomatopoeium.name),@onomatopoeium.name.length)
+              .float-left
+                = str.split(@onomatopoeium.name)[1]
+  canvas#myChart1 style="width:400,height:400"
+
+      /=image_tag(url_for(@onomatopoeium.example))
+  coffee:
+    myScatter1()
+  br
+  = link_to 'Edit', edit_onomatopoeium_path(@onomatopoeium)
+  |  | 
+  = link_to 'Back', onomatopoeia_path
+
+.footer
+  a href="https://cogpsy.sfc.keio.ac.jp/imailab/" target="_blank"
+    | 今井むつみ研究室
+  br
+  | copyright © 2013-2020 Imai Mutsumi Lab. All rights reserved.

@@ -1,0 +1,2 @@
+class PyNum < ApplicationRecord
+end

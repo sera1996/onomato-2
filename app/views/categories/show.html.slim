@@ -1,0 +1,46 @@
+
+/.body
+.container
+  p#notice
+    = notice
+  
+
+  - @category.onomatopoeium.each do |onomatopoeia|
+    .jumbotron.shadow-sm
+      .row
+        h1.display-4
+          = onomatopoeia.name
+        /- if onomatopoeia.example.attached?
+          | <image id = "onomatope_sample" class="rounded float-right" src="
+          =(url_for(onomatopoeia.example))
+          |">
+      p
+        = onomatopoeia.kana
+      hr.my-4
+      p.lead
+        = onomatopoeia.description
+      a.btn.btn-primary.btn-lg href="/onomatopoeia/#{onomatopoeia.id}" role="button"
+        | 詳細
+    /.card
+      a[href="/onomatopoeia/#{onomatopoeia.id}"]
+        .content
+          .onomatope_name
+            h3
+              = onomatopoeia.name
+            p
+              = onomatopoeia.kana
+          /.onomatope_detail
+            p
+              = onomatopoeia.description
+  .menu
+    = link_to 'オノマトペ追加', "/onomatopoeia/new/#{params[:id]}"
+    |  |
+    = link_to 'Edit', edit_category_path(@category)
+    |  | 
+    = link_to 'Back', categories_path
+
+.footer
+  a href="https://cogpsy.sfc.keio.ac.jp/imailab/" target="_blank"
+    | 今井むつみ研究室
+  br
+  | copyright © 2013-2020 Imai Mutsumi Lab. All rights reserved.

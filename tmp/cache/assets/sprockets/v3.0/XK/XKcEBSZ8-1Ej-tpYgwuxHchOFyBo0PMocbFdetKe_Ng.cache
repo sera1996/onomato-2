@@ -1,0 +1,54 @@
+I"�(function() {
+  window.chartColors = function() {
+    var color;
+    ({
+      red: "#FF0000",
+      blue: "#00FF00"
+    });
+    return color = Chart.helpers.color;
+  };
+
+  window.myScatter2 = function(result) {
+    var color, ctx, myChart, onomatopoeia, scatter_data, test;
+    ctx = document.getElementById('myChart2').getContext('2d');
+    color = Chart.helpers.color;
+    test = result.individual;
+    console.log("[" + result.individual + "]");
+    scatter_data = {
+      datasets: [
+        {
+          label: "単語名",
+          borderColor: "rgba(0,0,0,0.6)",
+          backgroundColor: "rgba(191,255,0,0.6)",
+          pointRadius: 10,
+          data: [test]
+        }
+      ]
+    };
+    onomatopoeia = ["さらさら", "すべすべ", "つるつる", "でこぼこ", "がさがさ", "ざらざら", "ふわふわ", "ぶわぶわ", "ぶよぶよ", "ぷるぷる", "ぐにゃぐにゃ", "ふかふか", "ふにゃふにゃ", "むちむち", "ごつごつ", "ごわごわ", "かちかち", "べたべ た", "べとべと", "べちょべちょ", "びしょびしょ", "びちゃびちゃ", "ぐしょぐしょ", "じくじく", "ぼそぼそ", "ぽそ ぽそ", "かさかさ", "ぱさぱさ", "ねばねば", "ねちねち", "ねとねと", "ねちゃねちゃ", "ぬめぬめ", "ぬるぬる", "に ゅるにゅる", "ぎとぎと"];
+    return myChart = new Chart.Scatter(ctx, {
+      data: scatter_data,
+      options: {
+        title: {
+          display: true,
+          text: "オノマトペ関係性グラフ"
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              var label;
+              label = data.datasets[tooltipItem.datasetIndex].label || '';
+              if (label) {
+                label += ': ';
+              }
+              label = onomatopoeia[tooltipItem.index];
+              return label;
+            }
+          }
+        }
+      }
+    });
+  };
+
+}).call(this);
+:ET

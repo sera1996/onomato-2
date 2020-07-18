@@ -1,0 +1,81 @@
+I"†
+
+/*
+window.draw_graph = -> 
+    ctx = document.getElementById("myChart").getContext('2d')
+    myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    })
+ */
+
+(function() {
+  window.chartColors = function() {
+    var color;
+    ({
+      red: "#FF0000",
+      blue: "#00FF00"
+    });
+    return color = Chart.helpers.color;
+  };
+
+  window.myScatter = function() {
+    var color, ctx, scatter_data;
+    ctx = document.getElementById('myChart').getContext('2d');
+    color = Chart.helpers.color;
+    scatter_data = {
+      datasets: [
+        {
+          label: "schatter dots",
+          borderColor: window.chartColors.red,
+          backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+          pointRadius: 10,
+          data: [[3.581, 3.874], [2.526, 3.733], [2.002, 2.795], [4.024, -1.656], [3.989, -2.083], [3.844, -2.405], [0.233, 2.771], [0.903, 0.356], [-1.161, 0.5], [-1.814, 2.426], [-1.736, 0.893], [1.52, 3.401], [-0.299, 1.581], [-1.618, 1.573], [3.912, -2.465], [3.375, -2.139], [3.868, 0.434], [-2.515, -1.314], [-2.965, -1.504], [-3.054, -0.815], [-1.995, -0.342], [-2.621, -0.732], [-2.676, -0.741], [-0.591, -1.213], [2.019, -0.976], [1.764, -0.295], [3.82, -1.141], [3.344, -0.887], [-2.806, -0.363], [-2.437, -0.15], [-2.622, -0.628], [-3.198, -0.457], [-3.298, -0.671], [-3.19, 0.068], [-2.693, 0.281], [-1.437, -1.708]]
+        }
+      ]
+    };
+    return Chart.Scatter(ctx, {
+      data: scatter_data,
+      option: {
+        title: {
+          display: true,
+          text: "Chart.js Scatter Chart"
+        }
+      }
+    });
+  };
+
+}).call(this);
+:ET

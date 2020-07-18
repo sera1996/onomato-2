@@ -1,0 +1,9 @@
+p#notice
+  = notice
+h1
+  | 用例一覧
+table
+  tbody
+    - @samples.each do |sample|
+        p
+          =sample.sentence

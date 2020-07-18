@@ -1,0 +1,926 @@
+= form_for @favor do |f|
+  - if @favor.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@favor.errors.count, "error")} prohibited this emboss from being saved:"
+      ul
+        - @favor.errors.full_messages.each do |message|
+          li = message
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | さらさら
+    .form-check.form-check-inline
+      = f.radio_button :sara, 1, class:"form-check-input"     
+      = f.label :sara, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sara, 2, class:"form-check-input"     
+      = f.label :sara, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sara, 3, class:"form-check-input"     
+      = f.label :sara, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sara, 4, class:"form-check-input"     
+      = f.label :sara, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sara, 5, class:"form-check-input"     
+      = f.label :sara, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sara, 6, class:"form-check-input"     
+      = f.label :sara, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sara, 7, class:"form-check-input"     
+      = f.label :sara, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | すべすべ
+    .form-check.form-check-inline
+      = f.radio_button :sube, 1, class:"form-check-input"     
+      = f.label :sube, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sube, 2, class:"form-check-input"     
+      = f.label :sube, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sube, 3, class:"form-check-input"     
+      = f.label :sube, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sube, 4, class:"form-check-input"     
+      = f.label :sube, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sube, 5, class:"form-check-input"     
+      = f.label :sube, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sube, 6, class:"form-check-input"     
+      = f.label :sube, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :sube, 7, class:"form-check-input"     
+      = f.label :sube, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | つるつる
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 1, class:"form-check-input"     
+      = f.label :tsuru, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 2, class:"form-check-input"     
+      = f.label :tsuru, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 3, class:"form-check-input"     
+      = f.label :tsuru, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 4, class:"form-check-input"     
+      = f.label :tsuru, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 5, class:"form-check-input"     
+      = f.label :tsuru, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 6, class:"form-check-input"     
+      = f.label :tsuru, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :tsuru, 7, class:"form-check-input"     
+      = f.label :tsuru, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | でこぼこ
+    .form-check.form-check-inline
+      = f.radio_button :deko, 1, class:"form-check-input"     
+      = f.label :deko, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :deko, 2, class:"form-check-input"     
+      = f.label :deko, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :deko, 3, class:"form-check-input"     
+      = f.label :deko, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :deko, 4, class:"form-check-input"     
+      = f.label :deko, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :deko, 5, class:"form-check-input"     
+      = f.label :deko, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :deko, 6, class:"form-check-input"     
+      = f.label :deko, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :deko, 7, class:"form-check-input"     
+      = f.label :deko, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | がさがさ
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 1, class:"form-check-input"     
+      = f.label :gasa, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 2, class:"form-check-input"     
+      = f.label :gasa, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 3, class:"form-check-input"     
+      = f.label :gasa, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 4, class:"form-check-input"     
+      = f.label :gasa, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 5, class:"form-check-input"     
+      = f.label :gasa, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 6, class:"form-check-input"     
+      = f.label :gasa, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gasa, 7, class:"form-check-input"     
+      = f.label :gasa, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ざらざら
+    .form-check.form-check-inline
+      = f.radio_button :zara, 1, class:"form-check-input"     
+      = f.label :zara, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :zara, 2, class:"form-check-input"     
+      = f.label :zara, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :zara, 3, class:"form-check-input"     
+      = f.label :zara, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :zara, 4, class:"form-check-input"     
+      = f.label :zara, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :zara, 5, class:"form-check-input"     
+      = f.label :zara, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :zara, 6, class:"form-check-input"     
+      = f.label :zara, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :zara, 7, class:"form-check-input"     
+      = f.label :zara, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ふわふわ
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 1, class:"form-check-input"     
+      = f.label :fuwa, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 2, class:"form-check-input"     
+      = f.label :fuwa, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 3, class:"form-check-input"     
+      = f.label :fuwa, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 4, class:"form-check-input"     
+      = f.label :fuwa, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 5, class:"form-check-input"     
+      = f.label :fuwa, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 6, class:"form-check-input"     
+      = f.label :fuwa, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuwa, 7, class:"form-check-input"     
+      = f.label :fuwa, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぶわぶわ
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 1, class:"form-check-input"     
+      = f.label :buwa, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 2, class:"form-check-input"     
+      = f.label :buwa, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 3, class:"form-check-input"     
+      = f.label :buwa, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 4, class:"form-check-input"     
+      = f.label :buwa, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 5, class:"form-check-input"     
+      = f.label :buwa, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 6, class:"form-check-input"     
+      = f.label :buwa, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buwa, 7, class:"form-check-input"     
+      = f.label :buwa, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぶよぶよ
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 1, class:"form-check-input"     
+      = f.label :buyo, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 2, class:"form-check-input"     
+      = f.label :buyo, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 3, class:"form-check-input"     
+      = f.label :buyo, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 4, class:"form-check-input"     
+      = f.label :buyo, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 5, class:"form-check-input"     
+      = f.label :buyo, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 6, class:"form-check-input"     
+      = f.label :buyo, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :buyo, 7, class:"form-check-input"     
+      = f.label :buyo, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぷるぷる
+    .form-check.form-check-inline
+      = f.radio_button :puru, 1, class:"form-check-input"     
+      = f.label :puru, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :puru, 2, class:"form-check-input"     
+      = f.label :puru, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :puru, 3, class:"form-check-input"     
+      = f.label :puru, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :puru, 4, class:"form-check-input"     
+      = f.label :puru, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :puru, 5, class:"form-check-input"     
+      = f.label :puru, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :puru, 6, class:"form-check-input"     
+      = f.label :puru, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :puru, 7, class:"form-check-input"     
+      = f.label :puru, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぐにゃぐにゃ
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 1, class:"form-check-input"     
+      = f.label :gunya, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 2, class:"form-check-input"     
+      = f.label :gunya, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 3, class:"form-check-input"     
+      = f.label :gunya, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 4, class:"form-check-input"     
+      = f.label :gunya, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 5, class:"form-check-input"     
+      = f.label :gunya, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 6, class:"form-check-input"     
+      = f.label :gunya, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gunya, 7, class:"form-check-input"     
+      = f.label :gunya, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ふかふか
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 1, class:"form-check-input"     
+      = f.label :fuka, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 2, class:"form-check-input"     
+      = f.label :fuka, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 3, class:"form-check-input"     
+      = f.label :fuka, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 4, class:"form-check-input"     
+      = f.label :fuka, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 5, class:"form-check-input"     
+      = f.label :fuka, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 6, class:"form-check-input"     
+      = f.label :fuka, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :fuka, 7, class:"form-check-input"     
+      = f.label :fuka, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ふにゃふにゃ 
+    .form-check.form-check-inline
+      = f.radio_button :funya, 1, class:"form-check-input"     
+      = f.label :funya, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :funya, 2, class:"form-check-input"     
+      = f.label :funya, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :funya, 3, class:"form-check-input"     
+      = f.label :funya, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :funya, 4, class:"form-check-input"     
+      = f.label :funya, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :funya, 5, class:"form-check-input"     
+      = f.label :funya, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :funya, 6, class:"form-check-input"     
+      = f.label :funya, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :funya, 7, class:"form-check-input"     
+      = f.label :funya, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | むちむち
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 1, class:"form-check-input"     
+      = f.label :muchi, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 2, class:"form-check-input"     
+      = f.label :muchi, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 3, class:"form-check-input"     
+      = f.label :muchi, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 4, class:"form-check-input"     
+      = f.label :muchi, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 5, class:"form-check-input"     
+      = f.label :muchi, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 6, class:"form-check-input"     
+      = f.label :muchi, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :muchi, 7, class:"form-check-input"     
+      = f.label :muchi, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ごつごつ
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 1, class:"form-check-input"     
+      = f.label :gotsu, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 2, class:"form-check-input"     
+      = f.label :gotsu, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 3, class:"form-check-input"     
+      = f.label :gotsu, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 4, class:"form-check-input"     
+      = f.label :gotsu, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 5, class:"form-check-input"     
+      = f.label :gotsu, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 6, class:"form-check-input"     
+      = f.label :gotsu, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gotsu, 7, class:"form-check-input"     
+      = f.label :gotsu, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ごわごわ
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 1, class:"form-check-input"     
+      = f.label :gowa, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 2, class:"form-check-input"     
+      = f.label :gowa, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 3, class:"form-check-input"     
+      = f.label :gowa, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 4, class:"form-check-input"     
+      = f.label :gowa, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 5, class:"form-check-input"     
+      = f.label :gowa, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 6, class:"form-check-input"     
+      = f.label :gowa, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gowa, 7, class:"form-check-input"     
+      = f.label :gowa, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | かちかち
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 1, class:"form-check-input"     
+      = f.label :kachi, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 2, class:"form-check-input"     
+      = f.label :kachi, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 3, class:"form-check-input"     
+      = f.label :kachi, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 4, class:"form-check-input"     
+      = f.label :kachi, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 5, class:"form-check-input"     
+      = f.label :kachi, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 6, class:"form-check-input"     
+      = f.label :kachi, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kachi, 7, class:"form-check-input"     
+      = f.label :kachi, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | べたべた
+    .form-check.form-check-inline
+      = f.radio_button :beta, 1, class:"form-check-input"     
+      = f.label :beta, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beta, 2, class:"form-check-input"     
+      = f.label :beta, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beta, 3, class:"form-check-input"     
+      = f.label :beta, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beta, 4, class:"form-check-input"     
+      = f.label :beta, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beta, 5, class:"form-check-input"     
+      = f.label :beta, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beta, 6, class:"form-check-input"     
+      = f.label :beta, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beta, 7, class:"form-check-input"     
+      = f.label :beta, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | べとべと
+    .form-check.form-check-inline
+      = f.radio_button :beto, 1, class:"form-check-input"     
+      = f.label :beto, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beto, 2, class:"form-check-input"     
+      = f.label :beto, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beto, 3, class:"form-check-input"     
+      = f.label :beto, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beto, 4, class:"form-check-input"     
+      = f.label :beto, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beto, 5, class:"form-check-input"     
+      = f.label :beto, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beto, 6, class:"form-check-input"     
+      = f.label :beto, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :beto, 7, class:"form-check-input"     
+      = f.label :beto, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | べちょべちょ  
+    .form-check.form-check-inline
+      = f.radio_button :becho, 1, class:"form-check-input"     
+      = f.label :becho, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :becho, 2, class:"form-check-input"     
+      = f.label :becho, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :becho, 3, class:"form-check-input"     
+      = f.label :becho, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :becho, 4, class:"form-check-input"     
+      = f.label :becho, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :becho, 5, class:"form-check-input"     
+      = f.label :becho, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :becho, 6, class:"form-check-input"     
+      = f.label :becho, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :becho, 7, class:"form-check-input"     
+      = f.label :becho, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | びしょびしょ
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 1, class:"form-check-input"     
+      = f.label :bisho, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 2, class:"form-check-input"     
+      = f.label :bisho, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 3, class:"form-check-input"     
+      = f.label :bisho, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 4, class:"form-check-input"     
+      = f.label :bisho, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 5, class:"form-check-input"     
+      = f.label :bisho, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 6, class:"form-check-input"     
+      = f.label :bisho, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bisho, 7, class:"form-check-input"     
+      = f.label :bisho, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | びちゃびちゃ
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 1, class:"form-check-input"     
+      = f.label :bicha, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 2, class:"form-check-input"     
+      = f.label :bicha, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 3, class:"form-check-input"     
+      = f.label :bicha, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 4, class:"form-check-input"     
+      = f.label :bicha, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 5, class:"form-check-input"     
+      = f.label :bicha, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 6, class:"form-check-input"     
+      = f.label :bicha, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :bicha, 7, class:"form-check-input"     
+      = f.label :bicha, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぐしょぐしょ
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 1, class:"form-check-input"     
+      = f.label :gusho, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 2, class:"form-check-input"     
+      = f.label :gusho, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 3, class:"form-check-input"     
+      = f.label :gusho, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 4, class:"form-check-input"     
+      = f.label :gusho, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 5, class:"form-check-input"     
+      = f.label :gusho, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 6, class:"form-check-input"     
+      = f.label :gusho, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gusho, 7, class:"form-check-input"     
+      = f.label :gusho, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | じくじく
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 1, class:"form-check-input"     
+      = f.label :jiku, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 2, class:"form-check-input"     
+      = f.label :jiku, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 3, class:"form-check-input"     
+      = f.label :jiku, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 4, class:"form-check-input"     
+      = f.label :jiku, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 5, class:"form-check-input"     
+      = f.label :jiku, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 6, class:"form-check-input"     
+      = f.label :jiku, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :jiku, 7, class:"form-check-input"     
+      = f.label :jiku, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぼそぼそ
+    .form-check.form-check-inline
+      = f.radio_button :boso, 1, class:"form-check-input"     
+      = f.label :boso, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :boso, 2, class:"form-check-input"     
+      = f.label :boso, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :boso, 3, class:"form-check-input"     
+      = f.label :boso, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :boso, 4, class:"form-check-input"     
+      = f.label :boso, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :boso, 5, class:"form-check-input"     
+      = f.label :boso, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :boso, 6, class:"form-check-input"     
+      = f.label :boso, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :boso, 7, class:"form-check-input"     
+      = f.label :boso, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぽそぽそ
+    .form-check.form-check-inline
+      = f.radio_button :poso, 1, class:"form-check-input"     
+      = f.label :poso, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :poso, 2, class:"form-check-input"     
+      = f.label :poso, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :poso, 3, class:"form-check-input"     
+      = f.label :poso, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :poso, 4, class:"form-check-input"     
+      = f.label :poso, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :poso, 5, class:"form-check-input"     
+      = f.label :poso, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :poso, 6, class:"form-check-input"     
+      = f.label :poso, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :poso, 7, class:"form-check-input"     
+      = f.label :poso, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | かさかさ
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 1, class:"form-check-input"     
+      = f.label :kasa, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 2, class:"form-check-input"     
+      = f.label :kasa, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 3, class:"form-check-input"     
+      = f.label :kasa, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 4, class:"form-check-input"     
+      = f.label :kasa, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 5, class:"form-check-input"     
+      = f.label :kasa, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 6, class:"form-check-input"     
+      = f.label :kasa, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :kasa, 7, class:"form-check-input"     
+      = f.label :kasa, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぱさぱさ
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 1, class:"form-check-input"     
+      = f.label :pasa, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 2, class:"form-check-input"     
+      = f.label :pasa, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 3, class:"form-check-input"     
+      = f.label :pasa, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 4, class:"form-check-input"     
+      = f.label :pasa, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 5, class:"form-check-input"     
+      = f.label :pasa, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 6, class:"form-check-input"     
+      = f.label :pasa, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :pasa, 7, class:"form-check-input"     
+      = f.label :pasa, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ねばねば 
+    .form-check.form-check-inline
+      = f.radio_button :neba, 1, class:"form-check-input"     
+      = f.label :neba, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neba, 2, class:"form-check-input"     
+      = f.label :neba, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neba, 3, class:"form-check-input"     
+      = f.label :neba, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neba, 4, class:"form-check-input"     
+      = f.label :neba, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neba, 5, class:"form-check-input"     
+      = f.label :neba, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neba, 6, class:"form-check-input"     
+      = f.label :neba, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neba, 7, class:"form-check-input"     
+      = f.label :neba, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ねちねち
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 1, class:"form-check-input"     
+      = f.label :nechi, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 2, class:"form-check-input"     
+      = f.label :nechi, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 3, class:"form-check-input"     
+      = f.label :nechi, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 4, class:"form-check-input"     
+      = f.label :nechi, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 5, class:"form-check-input"     
+      = f.label :nechi, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 6, class:"form-check-input"     
+      = f.label :nechi, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nechi, 7, class:"form-check-input"     
+      = f.label :nechi, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ねとねと
+    .form-check.form-check-inline
+      = f.radio_button :neto, 1, class:"form-check-input"     
+      = f.label :neto, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neto, 2, class:"form-check-input"     
+      = f.label :neto, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neto, 3, class:"form-check-input"     
+      = f.label :neto, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neto, 4, class:"form-check-input"     
+      = f.label :neto, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neto, 5, class:"form-check-input"     
+      = f.label :neto, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neto, 6, class:"form-check-input"     
+      = f.label :neto, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :neto, 7, class:"form-check-input"     
+      = f.label :neto, "7", class:"form-check-label"
+
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ねちゃねちゃ 
+    .form-check.form-check-inline
+      = f.radio_button :necha, 1, class:"form-check-input"     
+      = f.label :necha, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :necha, 2, class:"form-check-input"     
+      = f.label :necha, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :necha, 3, class:"form-check-input"     
+      = f.label :necha, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :necha, 4, class:"form-check-input"     
+      = f.label :necha, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :necha, 5, class:"form-check-input"     
+      = f.label :necha, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :necha, 6, class:"form-check-input"     
+      = f.label :necha, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :necha, 7, class:"form-check-input"     
+      = f.label :necha, "7", class:"form-check-label"
+  
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぬめぬめ
+    .form-check.form-check-inline
+      = f.radio_button :nume, 1, class:"form-check-input"     
+      = f.label :nume, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nume, 2, class:"form-check-input"     
+      = f.label :nume, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nume, 3, class:"form-check-input"     
+      = f.label :nume, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nume, 4, class:"form-check-input"     
+      = f.label :nume, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nume, 5, class:"form-check-input"     
+      = f.label :nume, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nume, 6, class:"form-check-input"     
+      = f.label :nume, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nume, 7, class:"form-check-input"     
+      = f.label :nume, "7", class:"form-check-label"
+  
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぬるぬる
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 1, class:"form-check-input"     
+      = f.label :nuru, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 2, class:"form-check-input"     
+      = f.label :nuru, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 3, class:"form-check-input"     
+      = f.label :nuru, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 4, class:"form-check-input"     
+      = f.label :nuru, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 5, class:"form-check-input"     
+      = f.label :nuru, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 6, class:"form-check-input"     
+      = f.label :nuru, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nuru, 7, class:"form-check-input"     
+      = f.label :nuru, "7", class:"form-check-label"
+  
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | にゅるにゅる
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 1, class:"form-check-input"     
+      = f.label :nyuru, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 2, class:"form-check-input"     
+      = f.label :nyuru, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 3, class:"form-check-input"     
+      = f.label :nyuru, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 4, class:"form-check-input"     
+      = f.label :nyuru, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 5, class:"form-check-input"     
+      = f.label :nyuru, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 6, class:"form-check-input"     
+      = f.label :nyuru, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :nyuru, 7, class:"form-check-input"     
+      = f.label :nyuru, "7", class:"form-check-label"
+  .input-group-prepend
+    span.input-group-text.px-3#basic-addon1
+      | ぎとぎと
+    .form-check.form-check-inline
+      = f.radio_button :gito, 1, class:"form-check-input"     
+      = f.label :gito, "1", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gito, 2, class:"form-check-input"     
+      = f.label :gito, "2", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gito, 3, class:"form-check-input"     
+      = f.label :gito, "3", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gito, 4, class:"form-check-input"     
+      = f.label :gito, "4", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gito, 5, class:"form-check-input"     
+      = f.label :gito, "5", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gito, 6, class:"form-check-input"     
+      = f.label :gito, "6", class:"form-check-label"
+    .form-check.form-check-inline
+      = f.radio_button :gito, 7, class:"form-check-input"     
+      = f.label :gito, "7", class:"form-check-label"
+  
+  = f.hidden_field :survey_id, :value => params[:id]
+  - if params[:dimension_name] == "0"
+    = f.hidden_field :dimension_name, value => "aadhesive"
+  - elsif params[:dimension_name] == "1"
+    = f. hidden_field :dimension_name, :value => "bfriction"
+  - elsif params[:dimension_name] == "2"
+    = f.hidden_field :dimension_name, :value => "cemboss"
+  - elsif params[:dimension_name] == "3"
+    = f.hidden_field :dimension_name, :value => "dflavor"
+  - elsif params[:dimension_name] == "4"
+    = f.hidden_field :dimension_name, :value => "eelastic"
+  - elsif params[:dimension_name] == "5"
+    = f.hidden_field :dimension_name, :value => "fwetness"
+  - elsif params[:dimension_name] == "6"
+    = f.hidden_field :dimension_name, :value => "ghardness"
+  /- dim_num = params[:dimension_name]
+  /- dim_num = dim_num.to_i
+  /= f.hidden_field :dimension_name, :value => dim_num
+  
+  .actions = f.submit

@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title
+      | Onomato
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.w-100
+    ul.navbar-nav.mr-auto
+      li.nav-item
+        a.nav-link href="/categories"
+          | 提示方法1
+      li.nav-item
+        a.nav-link href="/categories"
+          | 提示方法2
+      /li.nav-item
+        a.nav-link href="/onomatopoeia"
+          | オノマトペ一覧
+      li.nav-item
+        a.nav-link href="/surveys"
+          | システム評価
+      /li.nav-item
+        a.nav-link href="/favors"
+          | 軸別回答内容
+      li.nav-item
+        a.nav-link href = "/word2vec_sentence"
+          | 個人評価
+      li.nav-item
+        a.nav-link href = "/visuword"
+          | visuword
+    ul.navbar-nav.ml-auto
+      - if account_signed_in?
+        li.nav-item.text-right
+          a.nav-link[href="/accounts/sign_out" data-method="delete"]
+            | サインアウト
+      - else
+        li.nav-item
+          a.nav-link[href="/accounts/sign_in"]
+            | サインイン
+  body
+    = yield

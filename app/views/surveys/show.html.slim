@@ -1,0 +1,133 @@
+.container.mb-5
+    p#notice = notice
+    .row
+        .mx-auto
+            - if @survey.emboss == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 凸凹
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 凸凹
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/2/#{@survey.id}"
+        .mx-auto
+            - if @survey.favor == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 好感度
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 好感度
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/3/#{@survey.id}"
+        .mx-auto
+            - if @survey.hardness == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 硬さ
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 硬さ
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/6/#{@survey.id}"
+
+        .mx-auto
+            - if @survey.wetness == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 湿度
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 湿度
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/5/#{@survey.id}"
+
+        .mx-auto
+            - if @survey.elastic == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 弾力
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 弾力
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/4/#{@survey.id}"
+
+        .mx-auto
+            - if @survey.adhesive == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 粘性
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 粘性
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/0/#{@survey.id}"
+
+        .mx-auto
+            - if @survey.friction == true
+                .card.border-success.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 摩擦
+                    .card-body
+                        h5.card-title
+                            | 回答済み
+            - else
+                .card.border-danger.mb-3 style="max-width: 18rem;"
+                    .card-header
+                        | 摩擦
+                    .card-body
+                        h5.card-title
+                            = link_to '未回答', "/favors/new/1/#{@survey.id}"
+    - if @result1.nil? == false
+        .temp_information data-resultY=@result2 data-resultX=@result1
+        .mb-4
+            canvas#myChart2 style="width:400,height:400"
+        .mb-4
+            canvas#myChart1 style="width:400,height:400"
+
+            /=image_tag(url_for(@onomatopoeium.example))
+        coffee:
+            myScatter2($('.temp_information').data());
+            myScatter1();
+
+
+    => link_to 'Edit', edit_survey_path(@survey)
+    '|
+    =< link_to 'Back', surveys_path
+.footer
+  a href="https://cogpsy.sfc.keio.ac.jp/imailab/" target="_blank"
+    | 今井むつみ研究室
+  br
+  | copyright © 2013-2020 Imai Mutsumi Lab. All rights reserved.

@@ -1,0 +1,41 @@
+head
+    script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+.container.mb-5
+    h1#title
+        | 文章題評価　サンプル
+    /h2
+        = @b[0]
+    /h2 
+        = @b[1]
+    /form
+        .input-group.mb-3
+            .input-group-prepend
+                span.input-group-text#basic-addon1
+                    |類似度計算
+            .form-control
+                
+        button　type="submit"
+            | submit
+    .mb-3
+        = form_with(model: @py_num,local: true) do |f|
+            .input-group.mb-3
+                .input-group-prepend
+                    span.input-group-text#basic-addon1
+                        | 文章1
+
+                = f.text_field :sentence, :class => "form_control", :size => "100px"
+            .input-group.mb-3
+                .input-group-prepend
+                    span.input-group-text#basic-addon1
+                        | 文章2
+
+                = f.text_field :vocab, :class => "form_control", :size => "100px"
+            .actions
+                = f.submit "文章類似度比較"
+    -if params[:result].nil? == false
+        .card
+            .card-header
+                | 類似度処理結果
+            .card-body
+                = params[:result]
+
